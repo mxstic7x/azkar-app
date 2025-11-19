@@ -35,11 +35,13 @@ jobs:
         flutter-version: '3.19.0'
         channel: 'stable'
 
-   - name: Build APK
+    - name: Build APK
+      # 👇 هنا تم التعديل لإضافة اسم التطبيق والأيقونة
       run: |
         flet build apk --product "ذكرني" --icon icon.png --verbose
+
     - name: Upload APK
-      uses: actions/upload-artifact@v4  # 👈 هنا كان التعديل المهم من v3 إلى v4
+      uses: actions/upload-artifact@v4
       with:
         name: Azkar-App-APK
         path: build/apk/app-release.apk
