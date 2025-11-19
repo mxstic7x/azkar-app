@@ -35,10 +35,9 @@ jobs:
         flutter-version: '3.19.0'
         channel: 'stable'
 
-    - name: Build APK
-      # 👇 هنا التعديل: الاسم بالإنجليزية (Zakerny) لتجنب الأخطاء
+     - name: Build APK
       run: |
-        flet build apk --product "Zakerny" --icon icon.png --verbose
+        flet build apk --product "Zakerny" --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
