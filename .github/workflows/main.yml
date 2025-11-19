@@ -36,9 +36,9 @@ jobs:
         channel: 'stable'
 
     - name: Build APK
-      # 👇 هنا تم التعديل لإضافة اسم التطبيق والأيقونة
+      # 👇 هنا التعديل: الاسم بالإنجليزية (Zakerny) لتجنب الأخطاء
       run: |
-        flet build apk --product "ذكرني" --icon icon.png --verbose
+        flet build apk --product "Zakerny" --icon icon.png --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
