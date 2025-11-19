@@ -35,9 +35,10 @@ jobs:
         flutter-version: '3.19.0'
         channel: 'stable'
 
-     - name: Build APK
+    - name: Build APK
+      # 👇 قمنا بإزالة الأيقونة والاسم مؤقتاً لتجاوز الخطأ
       run: |
-        flet build apk --product "Zakerny" --verbose
+        flet build apk --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
